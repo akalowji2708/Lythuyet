@@ -810,10 +810,10 @@ html, body { margin: 0; padding: 0; background: #faf6ee; }
 
   #c2 .timeline li {
     display: grid;
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 200px 1fr;
     gap: 0.5rem 1rem;
     margin-bottom: 0.7rem;
-    align-items: baseline;
+    align-items: start;
     border-bottom: 1px dotted var(--border);
     padding-bottom: 0.6rem;
   }
@@ -824,7 +824,8 @@ html, body { margin: 0; padding: 0; background: #faf6ee; }
     font-weight: 600;
     color: var(--red);
     font-size: 0.92rem;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
   }
 
   #c2 .tl-event { font-size: 1rem; color: #1a1209; }
@@ -1463,6 +1464,31 @@ html, body { margin: 0; padding: 0; background: #faf6ee; }
   font-size: 16px;
   line-height: 1.8;
 }
+
+/* ===== JUSTIFY ALL BODY TEXT ===== */
+#nm p, #nm li, #nm .card, #nm .tl-event, #nm .event-content,
+#nm .subsection-header, #nm .alert, #nm .key,
+#c1 p, #c1 li, #c1 .card, #c1 .tl-event, #c1 .event-content,
+#c1 .subsection-header, #c1 .alert, #c1 .key,
+#c2 p, #c2 li, #c2 .card, #c2 .tl-event, #c2 .event-content,
+#c2 .subsection-header, #c2 .alert, #c2 .key,
+#c3 p, #c3 li, #c3 .card-body, #c3 .sub, #c3 .content-list li,
+#c3 .event-content, #c3 .key, #c3 .alert,
+#nm .section-body, #c1 .section-body, #c2 .section-body, #c3 .section-body {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Keep non-body elements left or center as appropriate */
+#nm .tl-date, #c1 .tl-date, #c2 .tl-date,
+#nm .event-date, #c1 .event-date, #c2 .event-date,
+#c3 .event-date,
+#nm th, #nm td, #c1 th, #c1 td, #c2 th, #c2 td, #c3 th, #c3 td,
+#nm .tag, #c1 .tag, #c2 .tag, #c3 .tag,
+#nm nav, #c1 nav, #c2 nav, #c3 nav,
+#nm .section-header, #c1 .section-header, #c2 .section-header, #c3 .section-header {
+  text-align: left;
+}
 </style>
 
 <style>
@@ -1597,11 +1623,7 @@ html, body { margin: 0; padding: 0; background: #faf6ee; }
 </div>
 <div class="tab-panel active">
 <div id="nm">
-<header>
-  <div class="header-flag"></div>
-  <h1>Ôn Thi Trắc Nghiệm<br><span>Chương Nhập Môn – Lịch Sử Đảng Cộng Sản Việt Nam</span></h1>
 
-</header>
 
 <nav>
   <a href="#gioi-thieu">Giới thiệu chung</a>
@@ -2114,11 +2136,7 @@ html, body { margin: 0; padding: 0; background: #faf6ee; }
 </div>
 <div class="tab-panel ">
 <div id="c1">
-<header>
-  <div class="header-flag"></div>
-  <h1>Ôn Thi Trắc Nghiệm<br><span>Chương 1 – Lịch Sử Đảng Cộng Sản Việt Nam</span></h1>
-  
-</header>
+
 
 <nav>
   <a href="#boi-canh">I. Bối cảnh & Tiền thân</a>
@@ -3131,10 +3149,7 @@ html, body { margin: 0; padding: 0; background: #faf6ee; }
 </div>
 <div class="tab-panel ">
 <div id="c2">
-<header>
-  <div class="header-flag"></div>
-  <h1>Ôn Thi Trắc Nghiệm<br><span>Chương 2 – Lịch Sử Đảng Cộng Sản Việt Nam</span></h1>
- </header>
+
 
 <nav>
   <a href="#phan1">I. Kháng chiến chống Pháp (1945–1954)</a>
@@ -3290,7 +3305,7 @@ html, body { margin: 0; padding: 0; background: #faf6ee; }
     </li>
     <li>
       <span class="tl-date">19/12/1946</span>
-      <span class="tl-event"><strong>Lời kêu gọi toàn quốc kháng chiến</strong> của Chủ tịch Hồ Chí Minh. 20 giờ ngày 19/12/1946 – pháo đài Láng bắn loạt đại bác đầu tiên → kháng chiến toàn quốc bùng nổ.</span>
+      <span class="tl-event"><strong>Lời kêu gọi toàn quốc kháng chiến</strong> của Chủ tịch Hồ Chí Minh. 20 giờ 3 phút ngày 19/12/1946 – pháo đài Láng bắn loạt đại bác đầu tiên → kháng chiến toàn quốc bùng nổ.</span>
     </li>
     <li>
       <span class="tl-date">17/2/1947</span>
@@ -4413,11 +4428,7 @@ html, body { margin: 0; padding: 0; background: #faf6ee; }
 </div>
 <div class="tab-panel ">
 <div id="c3">
-<header>
-  <div class="header-flag"></div>
-  <h1>Ôn Thi Trắc Nghiệm<br><span>Chương 3 – Lịch Sử Đảng Cộng Sản Việt Nam</span></h1>
- 
-</header>
+
 
 <nav>
   <ul>
